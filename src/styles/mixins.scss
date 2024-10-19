@@ -1,0 +1,13 @@
+@mixin title {
+  font-weight: 600;
+  font-size: 21px;
+  text-align: center;
+}
+@mixin description {
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b9b9ba;
+  font-family: "FeatureMono", sans-serif;
+  line-height: 1.7em;
+}

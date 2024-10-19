@@ -1,0 +1,27 @@
+.tabsHead {
+  display: flex;
+  // padding: 10px 0;
+}
+.tabItem {
+  border-radius: 24px;
+  font-size: 14px;
+  padding: 8px 14px;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+  font-family: "FeatureMono", sans-serif;
+}
+.tabItemActive {
+  background-color: #fff;
+  color: #00120f;
+  transition: 0.3s ease-in;
+}
+
+.hr {
+  border-bottom: 1px solid #222224;
+  width: 100%;
+}

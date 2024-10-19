@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "FeatureMono";
+  // src: url("../assets/fonts/FeatureMono-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/FeatureMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FeatureMono";
+  src: url("../assets/fonts/FeatureMono-Hairline.ttf") format("truetype");
+  font-weight: 100; // Hairline weight
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FeatureMono";
+  src: url("../assets/fonts/FeatureMono-Medium.ttf") format("truetype");
+  font-weight: 500; // Medium weight
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FeatureMono";
+  src: url("../assets/fonts/FeatureMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FeatureMono";
+  src: url("../assets/fonts/FeatureMono-Thin.ttf") format("truetype");
+  font-weight: 200; // Thin weight
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FeatureMono";
+  src: url("../assets/fonts/FeatureMono-Light.ttf") format("truetype");
+  font-weight: 300; // Light weight
+  font-style: normal;
+}
+
+// body {
+//   font-family: "MyCustomFont", sans-serif; // Использование локального шрифта
+// }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #161618;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+}

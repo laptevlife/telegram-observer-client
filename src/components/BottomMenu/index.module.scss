@@ -1,0 +1,41 @@
+.bottomMenu {
+  height: 57px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  color: #78797e;
+  // background-color: #161618;
+  background-color: #181818;
+  .bottomMenuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .bottomMenuItemTitle {
+    // margin-top: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13px;
+  }
+  .activeItemFill {
+    color: #f2b8e5 !important;
+    svg {
+      path {
+        fill: #f2b8e5 !important;
+      }
+    }
+  }
+  .activeItemStroke {
+    color: #f2b8e5 !important;
+    svg {
+      path {
+        stroke: #f2b8e5 !important;
+      }
+    }
+  }
+}
