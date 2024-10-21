@@ -18,21 +18,17 @@ import Button from '../../components/Button';
 import { useAppSelector } from '../../hooks/redux';
 
 const Profile = ({ currentUser = true, action }: any) => {
-  const { user } = useAppSelector((state) => state.userReducer);
+  const { user, tgUser } = useAppSelector((state) => state.userReducer);
 
-  const [lockedCollab, setLocked] = useState(true);
+  // const [lockedCollab, setLocked] = useState(true);
   return (
     <div className={s.profile}>
       <div className={s.userProfileImage}>
         <img src={img} alt="" />
       </div>
       <div className={s.userName}>{user?.userName}</div>
-      <div className={s.profileDescription}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-        quam facere iusto ratione sed, ad reiciendis quis eum tenetur illum
-        atque praesentium
-      </div>
-      <div className={s.collabRow}>
+      <div className={s.profileDescription}>{JSON.stringify(tgUser)}</div>
+      {/* <div className={s.collabRow}>
         <div
           className={cn(s.collabBtn, {
             [s.lockedCollab]: lockedCollab,
@@ -52,9 +48,9 @@ const Profile = ({ currentUser = true, action }: any) => {
         <div className={s.icon}>
           <ShareWhiteArrowIcon />
         </div>
-      </div>
+      </div> */}
 
-      <div className={s.boxRow}>
+      {/* <div className={s.boxRow}>
         <div className={cn(s.box, s.boxStat)}>
           <img src={V} className={s.statImg} alt="" />
           <div className={s.statData}>
@@ -69,7 +65,7 @@ const Profile = ({ currentUser = true, action }: any) => {
             <div className={s.secondRow}>#204,301</div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={s.linksBlock}>
         <div className={cn(s.box, s.boxStat)}>

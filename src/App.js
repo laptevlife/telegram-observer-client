@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 import BottomMenu from './components/BottomMenu';
-import { useActions } from './hooks/redux';
+import { useActions, useAppSelector } from './hooks/redux';
 import { userSlice } from './features/userSlice';
 import { mainApi } from './api';
 const tg = window.Telegram.WebApp
@@ -22,6 +22,8 @@ const theme = createTheme({
 
 const App = () => {
   const { setUser, setInitDataUnsafe, setTg, setTgUser } = useActions(userSlice.actions);
+
+
   useEffect(() => {
     setTg(tg)
     setTgUser(tgUser)
@@ -29,8 +31,9 @@ const App = () => {
     setInitDataUnsafe(tg?.initDataUnsafe)
   }, [setTgUser, setUser, setInitDataUnsafe, setTg])
 
-  const { data: user } = mainApi.useGetUserQuery(1766287065); //ml
-  // const { data: user } = mainApi.useGetUserQuery(785142454); //face
+  // const { data: user } = mainApi.useGetUserQuery(1766287065); //ml
+  // const { data: user } = mainApi.useGetUserQuery(1302543735); //rise
+  const { data: user } = mainApi.useGetUserQuery(tgUser?.id || 785142454); //face
   useEffect(() => {
     setUser(user)
     console.log('user!', user);

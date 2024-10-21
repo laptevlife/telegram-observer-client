@@ -98,6 +98,7 @@ const ContentRow = ({ i, isEditAction, userChats, keyword, onClick }: any) => {
             {/* <div className={cn(s.number, s.numberisEditAction)}>
                 {i.participantsCount}
               </div> */}
+
             {!keyword && isEditAction && (
               <div
                 className={s.click}
@@ -109,13 +110,14 @@ const ContentRow = ({ i, isEditAction, userChats, keyword, onClick }: any) => {
             {/* <div className={s.number}>{'qq'}</div> */}
             <div
               className={s.click}
-              onClick={() =>
+              onClick={(e) => {
+                e.stopPropagation();
                 isEditAction
                   ? keyword
                     ? deleteChatKeyWord()
                     : deleteUserChat()
-                  : !include && addUserChat()
-              }
+                  : !include && addUserChat();
+              }}
             >
               {/* <ArrowTopBold /> */}
 
