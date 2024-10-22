@@ -64,6 +64,7 @@ const TopPage = () => {
   // const { data: userChats } = mainApi.useGetUserChatsQuery(user.id);
 
   console.log('USER', user);
+  console.log('env', process.env.REACT_APP_SERVER_URL);
 
   console.log('foundedChats', foundedChats);
 

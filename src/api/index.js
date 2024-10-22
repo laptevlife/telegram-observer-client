@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
+// 
 
 // find_chats
 export const mainApi = createApi({
   reducerPath: 'mainApi',
   tagTypes: ['userChats'],
-  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.REACT_APP_SERVER_URL}/api` }),
   // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
   endpoints: (builder) => ({
     getUsers: builder.query({
